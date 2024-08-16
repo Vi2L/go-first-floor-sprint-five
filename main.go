@@ -109,13 +109,7 @@ func (r Running) Calories() float64 {
 // Это переопределенный метод TrainingInfo() из Training.
 func (r Running) TrainingInfo() InfoMessage {
 	// вставьте ваш код ниже
-	var i InfoMessage
-	i.Distance = r.Training.distance()
-	i.Speed = r.Training.meanSpeed()
-	i.Duration = r.Training.Duration
-	i.TrainingType = r.Training.TrainingType
-	i.Calories = r.Calories()
-	return i
+	return r.Training.TrainingInfo()
 
 }
 
@@ -148,13 +142,7 @@ func (w Walking) Calories() float64 {
 // Это переопределенный метод TrainingInfo() из Training.
 func (w Walking) TrainingInfo() InfoMessage {
 	// вставьте ваш код ниже
-	var i InfoMessage
-	i.Distance = w.Training.distance()
-	i.Speed = w.Training.meanSpeed()
-	i.Duration = w.Training.Duration
-	i.TrainingType = w.Training.TrainingType
-	i.Calories = w.Calories()
-	return i
+	return w.Training.TrainingInfo()
 }
 
 // Константы для расчета потраченных килокалорий при плавании.
